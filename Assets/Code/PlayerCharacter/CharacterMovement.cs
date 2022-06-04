@@ -27,6 +27,9 @@ public class CharacterMovement : MonoBehaviour
     public void RunForward() => 
         Move(Vector3.forward);
 
+    public void Move(Vector3 direction) => 
+        transform.Translate(_moveSpeed * direction * Time.fixedDeltaTime);
+
     public void Jump()
     {
         if (!IsGrounded())
@@ -38,7 +41,4 @@ public class CharacterMovement : MonoBehaviour
 
     private bool IsGrounded() => 
         Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-    
-    public void Move(Vector3 direction) => 
-        transform.Translate(_moveSpeed * direction * Time.fixedDeltaTime);
 }

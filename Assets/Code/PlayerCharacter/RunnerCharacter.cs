@@ -14,20 +14,19 @@ public class RunnerCharacter : MonoBehaviour
     private IInputService _input;
 
     [Inject]
-    public void Construct(IInputService input)
-    {
-        _input = input;
-    }
+    public void Construct(IInputService input) => _input = input;
 
-    //private void OnEnable() => _movement.OnJump += OnJump;
+    private void OnEnable() => _movement.OnJump += OnJump;
 
     private void FixedUpdate()
     {
         _movement.RunForward();
         
         if (_input.Axis.x != 0)
-            _movement.Move(Vector3.right * _input.Axis.x * 0.2f);
+            _movement.Move(Vector3.right * _input.Axis.x * 0.1f);
+        if (Input.GetKeyDown(KeyCode.Space))
+            _movement.Jump();
     }
 
-    //private void OnJump() => _animation.ActivateAnimationTrigger("Jump");
+    private void OnJump() => _animation.ActivateAnimationTrigger(AnimationNames.Jump);
 }

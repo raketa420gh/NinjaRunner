@@ -1247,7 +1247,7 @@ MonoBehaviour:
     m_Bits: 256
   _groundDistance: 0.1
   _groundCheck: {fileID: 6708617690907112019}
-  _body: {fileID: 0}
+  _body: {fileID: 492342727}
 --- !u!54 &242511964974075835
 Rigidbody:
   m_ObjectHideFlags: 0
