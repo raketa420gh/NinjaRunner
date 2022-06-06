@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.1
-    FarClipPlane: 5000
+    NearClipPlane: 0.05
+    FarClipPlane: 250
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -262,7 +262,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c601869f5b1048c46a8ed4c4b633277e, type: 2}
+      objectReference: {fileID: 9100000, guid: 8f11395412517554987f9c5d257b5bcf, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 0d9a372f9415a08458a3013d3fea5a28,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d9a372f9415a08458a3013d3fea5a28, type: 3}
 --- !u!4 &492342727 stripped
@@ -423,8 +428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1
-  m_FrequencyGain: 1
+  m_AmplitudeGain: 0.5
+  m_FrequencyGain: 0.5
   mNoiseOffsets: {x: -856.23413, y: 41.962036, z: 69.24667}
 --- !u!114 &583448517
 MonoBehaviour:
@@ -1389,8 +1394,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
+  near clip plane: 0.05
+  far clip plane: 250
   field of view: 40
   orthographic: 0
   orthographic size: 5
